@@ -1,0 +1,46 @@
+.Form {
+  width: 77%;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 70px;
+}
+.Form label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.Form .FormPart {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.Form .AboutYou {
+  display: flex;
+  justify-content: space-between;
+}
+.Form .AboutYou .FormGroupe {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.Form .AboutYou .FormGroupeBottom {
+  width: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.Form .AboutYou .FormGroupeBottom .Bottom {
+  width: 100%;
+}
+.Form .AboutYou .FormGroupeBottom .CheckboxGroupe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Form .ButtonSubmit {
+  margin-bottom: 120px;
+}/*# sourceMappingURL=Form.css.map */
