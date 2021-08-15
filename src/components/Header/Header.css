@@ -1,0 +1,29 @@
+.Header {
+  background-color: #FFD241;
+  width: 100%;
+  height: 70px;
+  padding-top: 23px;
+}
+.Header .Line1 {
+  height: 5px;
+  width: 30px;
+  margin-left: 971px;
+  border-radius: 0px;
+  background-color: #000000;
+}
+.Header .Line2 {
+  height: 4px;
+  width: 30px;
+  margin-left: 971px;
+  margin-top: 4px;
+  border-radius: 0px;
+  background-color: #000000;
+}
+.Header .Line3 {
+  height: 5px;
+  width: 30px;
+  margin-left: 971px;
+  margin-top: 4px;
+  border-radius: 0px;
+  background-color: #000000;
+}/*# sourceMappingURL=Header.css.map */

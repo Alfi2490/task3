@@ -1,0 +1,46 @@
+.BLOCK_1 {
+  width: 77%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.BLOCK_1 .Element {
+  width: 380px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.BLOCK_1 .Element .Image {
+  height: 218px;
+  background-image: url("test.png");
+}
+.BLOCK_1 .Element .Country {
+  font-size: 11px;
+  color: #C5B223;
+  margin: 12px 0;
+}
+.BLOCK_1 .Element .Title {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.BLOCK_1 .Element .Road {
+  font-size: 9px;
+  color: #8C8C8C;
+  max-width: 340px;
+  margin-bottom: 20px;
+}
+.BLOCK_1 .Element .Description {
+  font-size: 9px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.BLOCK_1 .Element .AdditionalInformation {
+  height: 17px;
+  width: 130px;
+  color: white;
+  background: #CB0037;
+  border-radius: 3px;
+  font-size: 9px;
+  text-align: center;
+  padding: 3px;
+}/*# sourceMappingURL=Block_1.css.map */
