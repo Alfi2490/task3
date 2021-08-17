@@ -10,11 +10,13 @@ function AboutYou(props) {
         component = <div className="AboutYou">
             <div className="FormGroupe">
                 <label htmlFor="name">Name {props.star}</label>
-                <input type="text" id="name" name="name" onChange={formik.handleChange} value={formik.values.name} className="Input" />
+                <input type="text" id="name" name="name" onChange={formik.handleChange} value={formik.values.name} className={formik.touched.name && formik.errors.name ? "InputRed" : "Input"} />
+                {formik.touched.name && formik.errors.name ? <div className="Error">{formik.errors.name}</div> : null}
             </div>
             <div className="FormGroupe">
                 <label htmlFor="tel">Telephone</label>
-                <input type="text" name="tel" id="tel" onChange={formik.handleChange} value={formik.values.tel} placeholder="+__ _ _______" className="Input" />
+                <input type="text" name="tel" id="tel" onChange={formik.handleChange} value={formik.values.tel} placeholder="+__ _ _______" className="Input" className={formik.touched.tel && formik.errors.tel ? "InputRed" : "Input"} />
+                {formik.touched.tel && formik.errors.tel ? <div className="Error">{formik.errors.tel}</div> : null}
             </div>
         </div>
     };

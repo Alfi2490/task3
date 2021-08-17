@@ -4,6 +4,12 @@
   text-align: left;
   margin-bottom: 70px;
 }
+.Form .Error {
+  color: #CB0037;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 15px;
+}
 .Form label {
   font-size: 10px;
   text-transform: uppercase;
@@ -33,6 +39,14 @@
   border: 1px solid #E7E7E7;
   outline: none;
   padding: 10px 30px;
+}
+.Form .AboutYou .FormGroupe .InputRed {
+  width: 380px;
+  height: 50px;
+  border: 1px solid #E7E7E7;
+  outline: none;
+  padding: 10px 30px;
+  border: 1px solid #CB0037;
 }
 .Form .AboutYou .FormGroupeBottom {
   width: 380px;

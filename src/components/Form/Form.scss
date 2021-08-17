@@ -10,6 +10,15 @@
     text-align: left;
     margin-bottom: 70px;
 
+    .Error {
+
+        color: #CB0037;
+        font-size: 10px;
+        font-weight: 500;
+        margin-top: 15px;
+
+    }
+
     label {
 
         font-size: 10px;
@@ -45,6 +54,13 @@
 
                 @include input.code;
         
+            }
+
+            .InputRed {
+
+                @include input.code;
+                border: 1px solid #CB0037;
+
             }
     
         }

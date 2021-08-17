@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import './Form.css';
 import AboutYou from './AboutYou';
+import * as Yup from 'yup';
 
 function Form() {
 
@@ -21,6 +22,10 @@ function Form() {
             getEmails: true,
             agreement: false
         },
+        validationSchema: Yup.object ({
+            name: Yup.string().min(2, 'Too short Name!').required('Required!'),
+            tel: Yup.string().min(13, 'Too short Telephone number!').max(13, 'Tel must be exactly 13 characters with +')
+        }),
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
         }
