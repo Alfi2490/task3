@@ -27,11 +27,19 @@
   flex-direction: column;
   margin-bottom: 20px;
 }
+.Form .AboutYou .FormGroupe .Input {
+  width: 380px;
+  height: 50px;
+  border: 1px solid #E7E7E7;
+  outline: none;
+  padding: 10px 30px;
+}
 .Form .AboutYou .FormGroupeBottom {
   width: 380px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 30px;
 }
 .Form .AboutYou .FormGroupeBottom .Bottom {
   width: 100%;
@@ -41,6 +49,81 @@
   flex-direction: column;
   align-items: center;
 }
+.Form .AboutYou .FormGroupeBottom .CheckboxGroupe .CheckBox {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #E7E7E7;
+  outline: none;
+}
+.Form .GetEmails {
+  margin-bottom: 30px;
+}
+.Form .GetEmails .Groupe {
+  display: flex;
+  align-items: center;
+}
+.Form .GetEmails input {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #E7E7E7;
+  outline: none;
+}
+.Form .GetEmails label {
+  margin-left: 20px;
+  margin-top: 11px;
+  text-transform: none;
+  font-size: 10px;
+  font-weight: 700;
+}
+.Form .GetEmails p {
+  margin: 20px 0 0 30px;
+  font-size: 10px;
+  font-weight: 300;
+  color: #C1C1C1;
+}
+.Form .Agreement {
+  margin-bottom: 30px;
+}
+.Form .Agreement .Groupe {
+  display: flex;
+  align-items: center;
+}
+.Form .Agreement input {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #E7E7E7;
+  outline: none;
+}
+.Form .Agreement label {
+  margin-left: 20px;
+  margin-top: 11px;
+  text-transform: none;
+  font-size: 10px;
+  font-weight: 700;
+}
+.Form .Agreement p {
+  margin: 20px 0 0 30px;
+  font-size: 10px;
+  font-weight: 300;
+  color: #C1C1C1;
+}
 .Form .ButtonSubmit {
+  width: 280px;
+  height: 49px;
+  background: #FFD241;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  border: none;
+  border-radius: 29.5px;
+  padding: 0 19px;
   margin-bottom: 120px;
+  margin-left: auto;
+}
+.Form .ButtonSubmit:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=Form.css.map */

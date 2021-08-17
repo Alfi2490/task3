@@ -1,3 +1,8 @@
+@use './input';
+@use './checkbox';
+@use './buttonSubmit';
+@use './additional';
+
 .Form{
 
     width: 77%;
@@ -35,6 +40,12 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 20px;
+
+            .Input {
+
+                @include input.code;
+        
+            }
     
         }
 
@@ -44,6 +55,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            margin-bottom: 30px;
 
             .Bottom {
 
@@ -57,14 +69,40 @@
                 flex-direction: column;
                 align-items: center;
 
+                .CheckBox {
+
+                    @include checkbox.code;
+
+                }
+
             }
 
         }
 
     }
 
+    .GetEmails {
+
+        @include additional.code;
+
+    }
+
+    .Agreement {
+
+        @include additional.code;
+
+    }
+
     .ButtonSubmit {
+        
+        @include buttonSubmit.code;
         margin-bottom: 120px;
+        margin-left: auto;
+
+        &:hover {
+            cursor: pointer;
+        }
+
     }
 
 }

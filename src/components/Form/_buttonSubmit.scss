@@ -1,0 +1,17 @@
+@mixin code {
+
+    width: 280px;
+    height: 49px;
+    background: #FFD241;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    border: none;
+    border-radius: 29.5px;
+    padding: 0 19px;
+
+}

@@ -5,25 +5,34 @@
   padding-top: 23px;
 }
 .Header .Line1 {
-  height: 5px;
-  width: 30px;
   margin-left: 971px;
   border-radius: 0px;
   background-color: #000000;
+  height: 5px;
+  width: 30px;
+}
+.Header .Line1:hover {
+  cursor: pointer;
 }
 .Header .Line2 {
+  margin-left: 971px;
+  border-radius: 0px;
+  background-color: #000000;
   height: 4px;
   width: 30px;
-  margin-left: 971px;
   margin-top: 4px;
-  border-radius: 0px;
-  background-color: #000000;
+}
+.Header .Line2:hover {
+  cursor: pointer;
 }
 .Header .Line3 {
-  height: 5px;
-  width: 30px;
   margin-left: 971px;
-  margin-top: 4px;
   border-radius: 0px;
   background-color: #000000;
+  height: 5px;
+  width: 30px;
+  margin-top: 4px;
+}
+.Header .Line3:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=Header.css.map */

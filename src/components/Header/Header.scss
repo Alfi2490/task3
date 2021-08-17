@@ -1,6 +1,5 @@
 $mainColor: #FFD241;
-$lineColor: #000000;
-
+@use './similarParams';
 
 .Header {
     
@@ -11,33 +10,27 @@ $lineColor: #000000;
 
     .Line1 {
 
+        @include similarParams.code;
         height: 5px;
-        width: 30px;
-        margin-left: 971px;
-        border-radius: 0px;
-        background-color: $lineColor;       
+        width: 30px;   
 
     }
 
     .Line2 {
 
+        @include similarParams.code;
         height: 4px;
         width: 30px;
-        margin-left: 971px;
         margin-top: 4px;
-        border-radius: 0px;
-        background-color: $lineColor;  
 
     }
 
     .Line3 {
 
+        @include similarParams.code;
         height: 5px;
         width: 30px;
-        margin-left: 971px;
         margin-top: 4px;
-        border-radius: 0px;
-        background-color: $lineColor;  
 
     }
 
