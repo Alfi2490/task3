@@ -2,6 +2,7 @@
 @use './checkbox';
 @use './buttonSubmit';
 @use './additional';
+@use './checkmark';
 
 .Form{
 
@@ -42,6 +43,7 @@
 
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
 
         .FormGroupe {
 
@@ -84,10 +86,14 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                position: relative;
+                cursor: pointer;
+                user-select: none;
 
                 .CheckBox {
 
                     @include checkbox.code;
+
 
                 }
 
