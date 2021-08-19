@@ -1,6 +1,6 @@
-import Header from '../Header/Header';
-import BLOCK_1 from '../Block_1/Block_1';
-import Form from '../Form/Form';
+import Header from './Header/Header';
+import BLOCK_1 from './Block_1/Block_1';
+import Form from './Form/Form';
 import './LenthWithForm.css';
 
 function LenthWithForm() {
