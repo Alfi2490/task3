@@ -8,7 +8,6 @@ function MainPage() {
     const dispatch = useDispatch();
 
     return <div onClick={() => dispatch(changeCondition('LenthWithForm'))}>
-        mainpage
         <Top />
         <Bottom />
     </div>

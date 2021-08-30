@@ -1,0 +1,5 @@
+.MainPageTop {
+    height: 400px;
+    background-image: url(topBackground.jpg);
+    background-size: cover;
+}

@@ -1,5 +1,7 @@
+import './Top.css';
+
 function Top() {
-    return <div>Top</div>
+    return <div className="MainPageTop"></div>
 }
 
 export default Top;

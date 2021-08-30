@@ -1,5 +1,9 @@
+import './Bottom.css'
+
 function Bottom() {
-    return <div>Bottom</div>
+    return <div className="MainPageButtom">
+        
+    </div>
 }
 
 export default Bottom;
