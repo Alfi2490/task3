@@ -48,6 +48,9 @@
   margin-bottom: 30px;
   text-align: left;
 }
+.MainPageButtom .LeftBlock button:hover {
+  cursor: pointer;
+}
 .MainPageButtom .LeftBlock button span {
   margin-left: 70px;
 }
@@ -55,6 +58,9 @@
   text-transform: uppercase;
   font-weight: 300;
   font-size: 0.6rem;
+}
+.MainPageButtom .LeftBlock h3:hover {
+  cursor: pointer;
 }
 .MainPageButtom .Jorney {
   width: 55%;

@@ -64,6 +64,12 @@
             margin-bottom: 30px;
             text-align: left;
 
+            &:hover {
+
+                cursor: pointer;
+
+            }
+
             span {
 
                 margin-left: 70px;
@@ -77,6 +83,12 @@
             text-transform: uppercase;
             font-weight: 300;
             font-size: 0.6rem;
+
+            &:hover {
+
+                cursor: pointer;
+
+            }
 
         }
 

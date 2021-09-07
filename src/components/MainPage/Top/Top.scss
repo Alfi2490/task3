@@ -1,0 +1,42 @@
+.MainPageTop {
+
+    height: 400px;
+    background-image: url(topBackground.jpg);
+    background-size: cover;
+
+    form {
+
+        width: 30%;
+        margin: 60px auto;
+
+        button {
+
+            width: 100%;
+            height: 30px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background-color: #FFD241;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+
+            &:hover {
+
+                cursor: pointer;
+
+            }
+
+        }
+
+        p {
+
+            margin-top: 10px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+
+        }
+
+    }
+
+}

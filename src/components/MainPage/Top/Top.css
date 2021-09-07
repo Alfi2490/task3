@@ -1,5 +1,28 @@
 .MainPageTop {
-    height: 400px;
-    background-image: url(topBackground.jpg);
-    background-size: cover;
+  height: 400px;
+  background-image: url(topBackground.jpg);
+  background-size: cover;
 }
+.MainPageTop form {
+  width: 30%;
+  margin: 60px auto;
+}
+.MainPageTop form button {
+  width: 100%;
+  height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  background-color: #FFD241;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+.MainPageTop form button:hover {
+  cursor: pointer;
+}
+.MainPageTop form p {
+  margin-top: 10px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+}/*# sourceMappingURL=Top.css.map */
