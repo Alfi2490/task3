@@ -9,7 +9,7 @@ const slice = createSlice({
     initialState: initState,
     reducers: {
         changeCondition: (state, {payload}) => {
-            state.condition = payload
+            state.condition = payload;
         }
     }
 });

@@ -1,5 +1,61 @@
-.MainPageButtom{
-    height: 650px;
-    background-color: #FFD241;
-    margin-bottom: -130px;
+.MainPageButtom {
+  height: 650px;
+  background-color: #FFD241;
+  margin-bottom: -130px;
+  padding: 40px 30px;
+  display: flex;
+  align-items: flex-start;
 }
+.MainPageButtom .LeftBlock {
+  width: 40%;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.MainPageButtom .LeftBlock h2 {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.MainPageButtom .LeftBlock h1 {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.MainPageButtom .LeftBlock p {
+  text-align: left;
+  font-weight: 0.6rem;
+  font-weight: 500;
+  color: #6e6666;
+  margin-bottom: 50px;
+}
+.MainPageButtom .LeftBlock p .Line {
+  height: 6px;
+  background-color: black;
+  width: 100px;
+  margin-bottom: 20px;
+}
+.MainPageButtom .LeftBlock button {
+  width: 150px;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.MainPageButtom .LeftBlock button span {
+  margin-left: 70px;
+}
+.MainPageButtom .LeftBlock h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.6rem;
+}
+.MainPageButtom .Jorney {
+  width: 55%;
+}/*# sourceMappingURL=Bottom.css.map */
