@@ -1,13 +1,20 @@
 import './Top.css';
 import Header from '../../LenthWithForm/Header/Header';
+import { useDispatch } from 'react-redux';
+import { changeCondition } from '../../../redux/appReducer';
 
 function Top() {
+
+    const dispatch = useDispatch();
     
     return <div className="MainPageTop">
 
         <Header noBackground />
 
-        <form onSubmit={e => e.preventDefault()}>
+        <form onSubmit={e => {
+            e.preventDefault();
+            dispatch(changeCondition('LenthWithForm'));
+        }}>
 
             <button type="submit">Apply</button>
 

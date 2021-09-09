@@ -1,7 +1,12 @@
 import './Bottom.css'
 import jorney from './jorney.jpg';
+import { useDispatch } from 'react-redux';
+import { changeCondition } from '../../../redux/appReducer';
 
 function Bottom() {
+
+  const dispatch = useDispatch();
+
     return (
       <div className="MainPageButtom">
 
@@ -15,7 +20,7 @@ function Bottom() {
             Israel, Belarus, Madagascar. Ways in the Turkey, Georgia, Italy.
             Find the trip as you like!
           </p>
-          <button>Go! <span>{String.fromCharCode(62)}</span></button>
+          <button onClick={() => dispatch(changeCondition('LenthWithForm'))}>Go! <span>{String.fromCharCode(62)}</span></button>
 
           <h3>{String.fromCharCode(60)} going to the rocket launch</h3>
 
