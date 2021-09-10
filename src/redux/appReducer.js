@@ -6,7 +6,8 @@ export const initState ={
     error: '',
     events: [],
     countries: [],
-    types: []
+    types: [],
+    filter: {},
 };
 
 const slice = createSlice({
@@ -50,6 +51,10 @@ const slice = createSlice({
             state.filter = payload;
         },
 
+        setFilter: (state, {payload}) => {
+            state.filter = payload;
+        }
+
     }
 });
 
@@ -60,7 +65,8 @@ export const {
     setEvents,
     setFilterRedux,
     setCountries,
-    setTypes
+    setTypes,
+    setFilter
 } = slice.actions;
 
 export const appSelector = state => state.app;

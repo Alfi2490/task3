@@ -1,16 +1,14 @@
 import './SelectGroupe.css';
-import Country from './Country/Country';
+import CountryList from './Country/Country';
 import Selector from './Selector/Selerctor';
 import Dates from './Dates/Dates';
-import Type from './Type/Type';
+import TypeList from './Type/Type';
 import { useSelector, useDispatch } from 'react-redux';
 import { mainPageTopSelector, setCondition } from '../../../../redux/mainPageTopReduser';
 
-function SelectGroupe(props) {
+function SelectGroupe() {
 
-    const filter = props.filter;
-
-    const { condition } = useSelector(mainPageTopSelector);
+    const { condition, Country, Type } = useSelector(mainPageTopSelector);
 
     const dispatch = useDispatch();
 
@@ -30,38 +28,25 @@ function SelectGroupe(props) {
         <Selector 
             onChangeCondition={handleChangeCondition} 
             condition="Country" 
-            value={filter.Country} 
+            value={Country}
             />
         <Selector 
             onChangeCondition={handleChangeCondition} 
-            condition="Dates" 
-            value={filter.Dates.From} />
+            condition="Dates"
+            value="Dates"
+            />
         <Selector 
             onChangeCondition={handleChangeCondition} 
-            condition="Type" 
-            value={filter.Type} />
+            condition="Type"
+            value={Type}
+            />
 
         {condition === 'Country' && <ul>
-            <Country 
-                countries={props.countries} 
-                setCountry={props.onSetFilter}
-                onChangeCondition={handleChangeCondition} />
-            </ul>}
+            <CountryList onChangeCondition={handleChangeCondition} /></ul>}
         {condition === 'Type' && <ul>
-            <Type 
-                types={props.types}
-                setType={props.onSetFilter}
-                onChangeCondition={handleChangeCondition}
-            /></ul>}
+            <TypeList onChangeCondition={handleChangeCondition} /></ul>}
 
-        {condition === 'Dates' && 
-            <Dates 
-                dateFrom={props.dateFrom}
-                dateTo={props.dateTo}
-                setDateFrom={props.setDateFrom}
-                setDateTo={props.setDateTo}
-                setDate={props.onSetFilter} 
-                onChangeCondition={handleChangeCondition} />}
+        {condition === 'Dates' && <Dates onChangeCondition={handleChangeCondition} />}
         
     </div>
 }

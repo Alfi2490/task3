@@ -36,9 +36,9 @@
   width: 100px;
   margin-bottom: 20px;
 }
-.MainPageButtom .LeftBlock button {
+.MainPageButtom .LeftBlock .GoButton {
   width: 150px;
-  height: 30px;
+  height: 40px;
   outline: none;
   border: none;
   padding: 8px 20px;
@@ -48,10 +48,10 @@
   margin-bottom: 30px;
   text-align: left;
 }
-.MainPageButtom .LeftBlock button:hover {
+.MainPageButtom .LeftBlock .GoButton:hover {
   cursor: pointer;
 }
-.MainPageButtom .LeftBlock button span {
+.MainPageButtom .LeftBlock .GoButton span {
   margin-left: 70px;
 }
 .MainPageButtom .LeftBlock h3 {

@@ -8,7 +8,6 @@ import Error from './Error/Error.jsx';
 function MainPage() {
 
     const dispatch = useDispatch();
-
     const { error } = useSelector(appSelector);
 
     useEffect(() => {

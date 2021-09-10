@@ -1,16 +1,21 @@
-function Type(props) {
+import { useSelector, useDispatch } from 'react-redux';
+import { appSelector } from '../../../../../redux/appReducer';
+import { setType } from '../../../../../redux/mainPageTopReduser';
 
-    const types = props.types;
+function TypeList(props) {
+
+    const { types } = useSelector(appSelector);
+    const dispatch = useDispatch();
 
     return <>
         {types.map(type => <li 
             className="Type" 
             key={type}
             onClick={() => {
-                props.setType('Type', type);
+                dispatch(setType(type));
                 props.onChangeCondition('');
             }}>{type}</li>)}
     </>
 }
 
-export default Type;
+export default TypeList;

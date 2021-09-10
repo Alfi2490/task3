@@ -91,21 +91,16 @@
   font-size: 0.8rem;
   z-index: 1;
   display: flex;
-  margin: 0 -5px;
   border-radius: 20px;
   position: absolute;
   top: 230px;
   overflow: visible;
-  padding: 10px;
+  padding: 9.5px;
   -webkit-animation: expand-dates 0.1s;
           animation: expand-dates 0.1s;
-  box-shadow: 7px 9px 2px -2px rgba(0, 0, 0, 0.41);
 }
 .SelectGroupeBig .Dates .Calendar {
-  width: 300px;
-}
-.SelectGroupeBig .Dates .Calendar:last-child {
-  margin-left: 10px;
+  width: 288px;
 }
 
 @-webkit-keyframes expand {

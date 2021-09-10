@@ -1,16 +1,21 @@
-function Country(props) {
+import { useSelector, useDispatch } from 'react-redux';
+import { setCountry } from '../../../../../redux/mainPageTopReduser';
+import { appSelector } from '../../../../../redux/appReducer';
 
-    const countries = props.countries;
+function CountryList(props) {
+
+    const { countries } = useSelector(appSelector);
+    const dispatch = useDispatch();
 
     return <>
         {countries.map(country => <li 
             className="Country" 
             key={country}
             onClick={() => {
-                props.setCountry('Country', country);
+                dispatch(setCountry(country));
                 props.onChangeCondition('');
             }}>{country}</li>)}
     </>
 }
 
-export default Country;
+export default CountryList;

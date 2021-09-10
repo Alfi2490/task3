@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const initState ={
     Country: 'Country',
     Type: 'Type',
-    dateFrom: new Date(),
-    dateTo: new Date(),
+    dateFrom: new Date().toString(),
+    dateTo: new Date().toString(),
     condition: '',
 };
 

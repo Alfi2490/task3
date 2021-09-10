@@ -14,13 +14,14 @@ function Bottom() {
           <h2>All the World.</h2>
           <h1>Holidays in the May</h1>
           <p>
-          <div className="Line"></div>
+          <span className="Line"></span>
             Holidays in the May - this is good occassion to go to vacation!
             Roads for any taste in Russia and all the World. Author ways in the
             Israel, Belarus, Madagascar. Ways in the Turkey, Georgia, Italy.
             Find the trip as you like!
           </p>
-          <button onClick={() => dispatch(changeCondition('LenthWithForm'))}>Go! <span>{String.fromCharCode(62)}</span></button>
+
+          <button className="GoButton" onClick={() => dispatch(changeCondition('LenthWithForm'))}>Go! <span>{String.fromCharCode(62)}</span></button>
 
           <h3 onClick={() => dispatch(changeCondition('LenthWithForm'))}>{String.fromCharCode(60)} going to the rocket launch</h3>
 
