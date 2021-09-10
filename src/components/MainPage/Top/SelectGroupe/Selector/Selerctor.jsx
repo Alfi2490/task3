@@ -1,11 +1,15 @@
 import arrow from './arrowdown.png';
+import { useSelector } from 'react-redux';
+import { mainPageTopSelector } from '../../../../../redux/mainPageTopReduser';
 
 function Selector(props) {
 
-    let currentClass = ``;
+    let currentClass = '';
 
-    if (props.condition === props.currentState) {
-        currentClass = `${props.currentState}IMG`
+    const { condition } = useSelector(mainPageTopSelector);
+
+    if (props.condition === condition) {
+        currentClass = `${condition}IMG`
     }
 
 

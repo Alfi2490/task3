@@ -1,24 +1,27 @@
 import './SelectGroupe.css';
-import { useState } from 'react';
 import Country from './Country/Country';
 import Selector from './Selector/Selerctor';
 import Dates from './Dates/Dates';
 import Type from './Type/Type';
+import { useSelector, useDispatch } from 'react-redux';
+import { mainPageTopSelector, setCondition } from '../../../../redux/mainPageTopReduser';
 
 function SelectGroupe(props) {
 
     const filter = props.filter;
 
-    const [condition, setCondition] = useState('');
+    const { condition } = useSelector(mainPageTopSelector);
+
+    const dispatch = useDispatch();
 
     function handleChangeCondition (str) {
 
         if (condition === str) {
-            setCondition('');
+            dispatch(setCondition(''));
             return
         }
 
-        setCondition(str);
+        dispatch(setCondition(str));
 
     }
 
@@ -27,18 +30,15 @@ function SelectGroupe(props) {
         <Selector 
             onChangeCondition={handleChangeCondition} 
             condition="Country" 
-            currentState={condition}
             value={filter.Country} 
             />
         <Selector 
             onChangeCondition={handleChangeCondition} 
             condition="Dates" 
-            currentState={condition}
             value={filter.Dates.From} />
         <Selector 
             onChangeCondition={handleChangeCondition} 
             condition="Type" 
-            currentState={condition}
             value={filter.Type} />
 
         {condition === 'Country' && <ul>

@@ -2,36 +2,25 @@ import Top from './Top/Top';
 import Bottom from './Bottom/Bottom';
 import { useEffect } from 'react';
 import { getEventsAction, appSelector } from '../../redux/appReducer';
-import { useDispatch,useSelector }from 'react-redux';
+import { useDispatch, useSelector }from 'react-redux';
+import Error from './Error/Error.jsx';
 
 function MainPage() {
 
-    let countries = [];
-    let types = [];
+    const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
+    const { error } = useSelector(appSelector);
 
     useEffect(() => {
         dispatch(getEventsAction());
-    },[dispatch]);
-
-    const { events } = useSelector(appSelector);
-
-    events.forEach(event => {
-
-        if(countries.indexOf(event.Country) === -1){
-            countries.push(event.Country);
-        }
-        
-        if(types.indexOf(event.Type) === -1){
-            types.push(event.Type);
-        }
-        
-    });
+    }, [dispatch]);
 
     return <div >
 
-        <Top countries={countries} types={types}/>
+        {error && <Error />}
+
+        <Top />
+
         <Bottom />
         
     </div>

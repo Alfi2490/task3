@@ -5,7 +5,8 @@ export const initState ={
     condition: 'MainPage',
     error: '',
     events: [],
-    filter: {},
+    countries: [],
+    types: []
 };
 
 const slice = createSlice({
@@ -27,11 +28,27 @@ const slice = createSlice({
 
         setEvents: (state, {payload}) => {
             state.events = payload;
+            let countries = [];
+            let types = [];
+            payload.forEach(event => {
+
+                if(countries.indexOf(event.Country) === -1){
+                    countries.push(event.Country);
+                }
+                
+                if(types.indexOf(event.Type) === -1){
+                    types.push(event.Type);
+                }
+                
+            });
+            state.countries = countries;
+            state.types = types;
+
         },
 
         setFilterRedux: (state, {payload}) => {
             state.filter = payload;
-        }
+        },
 
     }
 });
@@ -41,7 +58,9 @@ export const {
     setError,
     clearError,
     setEvents,
-    setFilterRedux
+    setFilterRedux,
+    setCountries,
+    setTypes
 } = slice.actions;
 
 export const appSelector = state => state.app;
@@ -53,7 +72,12 @@ export default slice.reducer;
 export function getEventsAction() {
     return async dispatch => {
         dispatch(clearError());
-        const events = await getEvents();
-        dispatch(setEvents(events));
+        try{
+            const events = await getEvents();
+            dispatch(setEvents(events)); 
+        } catch (error) {
+            dispatch(setError(error));
+        }
+        
     }
 }

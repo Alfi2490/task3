@@ -1,7 +1,7 @@
 import './Top.css';
 import Header from '../../LenthWithForm/Header/Header';
 import { useDispatch } from 'react-redux';
-import { changeCondition, setFilterRedux } from '../../../redux/appReducer';
+import { changeCondition } from '../../../redux/appReducer';
 import SelectGroupe from './SelectGroupe/SelectGroupe';
 import { useState } from 'react';
 
@@ -22,8 +22,6 @@ function Top(props) {
         setFilter(tmp);        
     };
 
-    console.log(dateFrom, dateTo);
-
     const dispatch = useDispatch();
     
     return <div className="MainPageTop">
@@ -34,7 +32,6 @@ function Top(props) {
 
             <button onClick={() => {
                 dispatch(changeCondition('LenthWithForm'));
-                dispatch(setFilterRedux(filter)); 
                 }}>Apply</button>
 
             <SelectGroupe 

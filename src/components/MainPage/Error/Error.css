@@ -1,0 +1,19 @@
+.Error {
+    position: absolute;
+    text-transform: uppercase;
+    color: rgb(255, 0, 0);
+    width: 300px;
+    height: 150px;
+    top: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 40.6%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    background: rgba(155, 53, 53 , 0.5);
+}
+
+.Error::after {
+    content: ' !';
+}
