@@ -3,13 +3,13 @@
   background-image: url(topBackground.jpg);
   background-size: cover;
 }
-.MainPageTop form {
+.MainPageTop .MainPageFilteer {
   width: 30%;
   margin: 60px auto;
 }
-.MainPageTop form button {
+.MainPageTop .MainPageFilteer button {
   width: 100%;
-  height: 30px;
+  height: 40px;
   text-transform: uppercase;
   margin-bottom: 10px;
   background-color: #FFD241;
@@ -17,10 +17,10 @@
   outline: none;
   border-radius: 20px;
 }
-.MainPageTop form button:hover {
+.MainPageTop .MainPageFilteer button:hover {
   cursor: pointer;
 }
-.MainPageTop form p {
+.MainPageTop .MainPageFilteer p {
   margin-top: 10px;
   color: white;
   font-size: 0.8rem;

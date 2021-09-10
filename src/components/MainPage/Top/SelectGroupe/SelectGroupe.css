@@ -1,0 +1,175 @@
+.SelectGroupe {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+.SelectGroupe .Selector {
+  color: #9c2d2d;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  flex-basis: 29%;
+  justify-content: space-between;
+}
+.SelectGroupe .Selector:hover {
+  cursor: pointer;
+}
+.SelectGroupe .Selector img {
+  width: 15px;
+  margin-left: 5px;
+}
+.SelectGroupe ul {
+  display: none;
+}
+
+.SelectGroupeBig {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 11px 20px;
+  -webkit-animation: expand 0.5s;
+          animation: expand 0.5s;
+  flex-wrap: wrap;
+}
+.SelectGroupeBig .Selector {
+  color: #9c2d2d;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  flex-basis: 29%;
+  align-items: center;
+}
+.SelectGroupeBig .Selector:hover {
+  cursor: pointer;
+}
+.SelectGroupeBig .Selector img {
+  width: 15px;
+  margin-left: 5px;
+}
+.SelectGroupeBig .Selector .CountryIMG, .SelectGroupeBig .Selector .TypeIMG, .SelectGroupeBig .Selector .DatesIMG {
+  -webkit-animation: rotate-img 0.5s;
+          animation: rotate-img 0.5s;
+  transform: rotate(180deg);
+}
+.SelectGroupeBig ul {
+  width: 100%;
+  height: 100px;
+  margin-top: 15px;
+  width: 80%;
+  overflow: scroll;
+  overflow-x: hidden;
+  -webkit-animation: expand-li 0.5s;
+          animation: expand-li 0.5s;
+}
+.SelectGroupeBig ul .Country, .SelectGroupeBig ul .Type {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.SelectGroupeBig ul .Country:hover, .SelectGroupeBig ul .Type:hover {
+  cursor: pointer;
+}
+.SelectGroupeBig ul .Country {
+  text-align: left;
+}
+.SelectGroupeBig ul .Type {
+  text-align: right;
+}
+.SelectGroupeBig .Dates {
+  background-color: white;
+  font-size: 0.5rem;
+  font-size: 0.8rem;
+  z-index: 1;
+  display: flex;
+  margin: 0 -5px;
+  border-radius: 20px;
+  position: absolute;
+  top: 230px;
+  overflow: visible;
+  padding: 10px;
+  -webkit-animation: expand-dates 0.1s;
+          animation: expand-dates 0.1s;
+  box-shadow: 7px 9px 2px -2px rgba(0, 0, 0, 0.41);
+}
+.SelectGroupeBig .Dates .Calendar {
+  width: 300px;
+}
+.SelectGroupeBig .Dates .Calendar:last-child {
+  margin-left: 10px;
+}
+
+@-webkit-keyframes expand {
+  from {
+    height: 40px;
+  }
+  to {
+    height: 150px;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 40px;
+  }
+  to {
+    height: 150px;
+  }
+}
+@-webkit-keyframes expand-li {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 100px;
+  }
+}
+@keyframes expand-li {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 100px;
+  }
+}
+@-webkit-keyframes rotate-img {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotate-img {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes expand-dates {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 320px;
+  }
+}
+@keyframes expand-dates {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 320px;
+  }
+}/*# sourceMappingURL=SelectGroupe.css.map */

@@ -1,0 +1,198 @@
+.SelectGroupe {
+
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+
+    .Selector {
+
+        color: rgb(156, 45, 45);
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        flex-basis: 29%;
+        justify-content: space-between;
+
+
+        &:hover {
+
+            cursor: pointer;
+
+        }
+
+        img {
+
+            width: 15px;
+            margin-left: 5px;
+
+        }
+
+    }
+
+    ul {
+        display: none;
+    }
+
+}
+
+.SelectGroupeBig {
+
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 11px 20px;
+    animation: expand 0.5s;
+    flex-wrap: wrap;    
+
+    .Selector {
+
+        color: rgb(156, 45, 45);
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-self: flex-start;
+        flex-basis: 29%;
+        align-items: center;
+
+        &:hover {
+
+            cursor: pointer;
+
+        }
+
+        img {
+
+            width: 15px;
+            margin-left: 5px;
+
+        }
+
+        .CountryIMG, .TypeIMG, .DatesIMG{
+
+            animation: rotate-img 0.5s;
+            transform: rotate(180deg);
+
+        }
+
+    }
+
+    ul {
+
+        width: 100%;
+        height: 100px;
+        margin-top: 15px;
+        width: 80%;
+        overflow: scroll;
+        overflow-x: hidden;
+        animation: expand-li 0.5s;
+
+        .Country, .Type {
+
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            margin-right: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+
+        .Country {
+            
+            text-align: left;
+
+        }
+
+        .Type {
+
+            text-align: right;
+
+        }
+
+
+    }
+
+    .Dates {
+
+        background-color: white;
+        font-size: 0.5rem;
+        font-size: 0.8rem;
+        z-index: 1;
+        display: flex;
+        margin: 0 -5px;
+        border-radius: 20px;
+        position: absolute;
+        top: 230px;
+        overflow: visible;
+        padding: 10px;
+        animation: expand-dates 0.1s;
+        box-shadow: 7px 9px 2px -2px rgba(0,0,0,0.41);
+
+        .Calendar {
+
+            width: 300px;
+
+            &:last-child {
+                margin-left: 10px; 
+            }
+            
+
+        }        
+
+    }
+
+}
+
+@keyframes expand {
+
+    from {
+        height: 40px;
+    }
+
+    to {
+        height: 150px;
+    }
+
+}
+
+@keyframes expand-li {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height:  100px;
+    }
+
+}
+
+@keyframes rotate-img {
+    
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes expand-dates {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height:  320px;
+    }
+
+}

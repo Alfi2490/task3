@@ -5,6 +5,7 @@ export const initState ={
     condition: 'MainPage',
     error: '',
     events: [],
+    filter: {},
 };
 
 const slice = createSlice({
@@ -26,6 +27,10 @@ const slice = createSlice({
 
         setEvents: (state, {payload}) => {
             state.events = payload;
+        },
+
+        setFilterRedux: (state, {payload}) => {
+            state.filter = payload;
         }
 
     }
@@ -35,16 +40,13 @@ export const {
     changeCondition,
     setError,
     clearError,
-    setEvents
+    setEvents,
+    setFilterRedux
 } = slice.actions;
 
 export const appSelector = state => state.app;
 
 export default slice.reducer;
-
-// const events = getEvents();
-// events.then(res => setEvents(res)).catch(err => setError(err));
-
 
 // ---------------Actions-----------------
 

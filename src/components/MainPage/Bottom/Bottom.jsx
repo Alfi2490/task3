@@ -22,7 +22,7 @@ function Bottom() {
           </p>
           <button onClick={() => dispatch(changeCondition('LenthWithForm'))}>Go! <span>{String.fromCharCode(62)}</span></button>
 
-          <h3>{String.fromCharCode(60)} going to the rocket launch</h3>
+          <h3 onClick={() => dispatch(changeCondition('LenthWithForm'))}>{String.fromCharCode(60)} going to the rocket launch</h3>
 
         </div>
 

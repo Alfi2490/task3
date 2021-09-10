@@ -1,9 +1,28 @@
 import './Top.css';
 import Header from '../../LenthWithForm/Header/Header';
 import { useDispatch } from 'react-redux';
-import { changeCondition } from '../../../redux/appReducer';
+import { changeCondition, setFilterRedux } from '../../../redux/appReducer';
+import SelectGroupe from './SelectGroupe/SelectGroupe';
+import { useState } from 'react';
 
-function Top() {
+function Top(props) {
+
+    const [filter, setFilter] = useState({Country:'Country', Type: 'Type', Dates: {From: '' , To: ''}});
+    const [dateFrom, setDateFrom] = useState(new Date());
+    const [dateTo, setDateTo] = useState(new Date());
+
+    function handleSetFilter (type, value) {
+        let {...tmp} = filter;
+        if(type === 'Country') {
+            tmp.Country = value;
+        };
+        if(type === 'Type') {
+            tmp.Type = value;
+        };
+        setFilter(tmp);        
+    };
+
+    console.log(dateFrom, dateTo);
 
     const dispatch = useDispatch();
     
@@ -11,38 +30,25 @@ function Top() {
 
         <Header noBackground />
 
-        <form onSubmit={e => {
-            e.preventDefault();
-            dispatch(changeCondition('LenthWithForm'));
-        }}>
+        <div className="MainPageFilteer" >
 
-            <button type="submit">Apply</button>
+            <button onClick={() => {
+                dispatch(changeCondition('LenthWithForm'));
+                dispatch(setFilterRedux(filter)); 
+                }}>Apply</button>
 
-            <div className="SelectGroupe">
-
-                <select name="country" id="country">
-                    <option disabled>Country</option>
-                    <option value="Israel">Israel</option>
-                    <option value="Belarus">Belarus</option>
-                </select>
-
-                <select name="date" id="date">
-                    <option disabled>Date</option>
-                    <option value="Israel">2021</option>
-                    <option value="Belarus">2022</option>
-                </select>
-
-                <select name="type" id="type">
-                    <option disabled>Type</option>
-                    <option value="Israel">Rest</option>
-                    <option value="Belarus">Tourist</option>
-                </select>
-
-            </div>
+            <SelectGroupe 
+                {...props} 
+                filter={filter} 
+                onSetFilter={handleSetFilter}
+                dateFrom={dateFrom} 
+                dateTo={dateTo} 
+                setDateFrom={setDateFrom}
+                setDateTo={setDateTo} />
 
             <p>We have many opportunities for proposing new jorneys and make you happy!</p>
 
-        </form>
+        </div>
         
     </div>
 }
