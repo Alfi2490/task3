@@ -2,11 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 import getEvents from '../firebase/api-initial';
 
 export const initState ={
-    condition: 'MainPage',
     error: '',
     events: [],
-    countries: [],
-    types: [],
+    countries: ['Belarus', 'Israel', 'Turkey', 'Russia', 'Italy'],
+    types: ['Rest', 'Jorney', 'Tourism', 'Beer trip', 'Excursion'],
     filter: {},
 };
 
@@ -14,10 +13,6 @@ const slice = createSlice({
     name:'app',
     initialState: initState,
     reducers: {
-
-        changeCondition: (state, {payload}) => {
-            state.condition = payload;
-        },
 
         setError: (state, {payload}) => {
             state.error = payload;
@@ -59,7 +54,6 @@ const slice = createSlice({
 });
 
 export const {
-    changeCondition,
     setError,
     clearError,
     setEvents,

@@ -126,19 +126,29 @@
 
         background-color: white;
         font-size: 0.5rem;
-        font-size: 0.8rem;
         z-index: 1;
         display: flex;
         border-radius: 20px;
         position: absolute;
-        top: 230px;
+        top: 240px;
         overflow: visible;
         padding: 9.5px;
         animation: expand-dates 0.1s;
 
         .Calendar {
 
-            width: 288px;            
+            width: 288px;
+            border: none;
+            font-size: 0.5rem;
+
+            .CalendarTile {
+
+                font-size: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
 
         }        
 
@@ -186,6 +196,16 @@
     }
     to {
         height:  320px;
+    }
+
+}
+
+@media only screen and (max-width: 481px) {
+
+    .Dates {
+        
+        box-shadow: 5px 5px 11px -1px rgba(0,0,0,0.58);
+
     }
 
 }

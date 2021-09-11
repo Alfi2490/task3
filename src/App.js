@@ -1,17 +1,20 @@
 import './App.css';
 import LenthWithForm from './components/LenthWithForm/LenthWithForm';
 import MainPage from './components/MainPage/MainPage';
-import {useSelector} from 'react-redux';
-import {appSelector} from './redux/appReducer';
+import {Route, Switch, Redirect } from 'react-router-dom';
+
 
 function App() {
 
-  const {condition} = useSelector(appSelector);
-
   return (
     <div className="App">
-      {condition === 'MainPage' ? <MainPage /> : null}
-      {condition === 'LenthWithForm' ? <LenthWithForm /> : null}     
+
+      <Switch>
+        <Route path="/" exact component={MainPage} />
+        <Route path="/lenth" component={LenthWithForm} />
+        <Redirect from="**" to="/" />
+      </Switch>  
+
     </div>
   );
 }

@@ -3,8 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const initState ={
     Country: 'Country',
     Type: 'Type',
-    dateFrom: new Date().toString(),
-    dateTo: new Date().toString(),
+    dates: {From: '', To: ''},
     condition: '',
 };
 
@@ -21,12 +20,8 @@ const slice = createSlice({
             state.Type = payload;
         },
 
-        setDateFrom: (state, {payload}) => {
-            state.dateFrom = payload;
-        },
-
-        setDateTo: (state, {payload}) => {
-            state.dateTo = payload;
+        setDates: (state, {payload}) => {
+            state.dates = payload;
         },
 
         setCondition: (state, {payload}) => {
@@ -39,8 +34,7 @@ const slice = createSlice({
 export const {
     setCountry,
     setType,
-    setDateFrom,
-    setDateTo,
+    setDates,
     setCondition,
 } = slice.actions;
 

@@ -1,11 +1,10 @@
 import './Bottom.css'
 import jorney from './jorney.jpg';
-import { useDispatch } from 'react-redux';
-import { changeCondition } from '../../../redux/appReducer';
+import { useHistory } from 'react-router-dom';
 
 function Bottom() {
 
-  const dispatch = useDispatch();
+  let history = useHistory();
 
     return (
       <div className="MainPageButtom">
@@ -21,9 +20,9 @@ function Bottom() {
             Find the trip as you like!
           </p>
 
-          <button className="GoButton" onClick={() => dispatch(changeCondition('LenthWithForm'))}>Go! <span>{String.fromCharCode(62)}</span></button>
+          <button className="GoButton" onClick={() => history.push('/lenth')}>Go! <span>{String.fromCharCode(62)}</span></button>
 
-          <h3 onClick={() => dispatch(changeCondition('LenthWithForm'))}>{String.fromCharCode(60)} going to the rocket launch</h3>
+          <h3 onClick={() => history.push('/lenth')}>{String.fromCharCode(60)} going to the rocket launch</h3>
 
         </div>
 

@@ -64,4 +64,70 @@
 }
 .MainPageButtom .Jorney {
   width: 55%;
+}
+
+@media only screen and (max-width: 481px) {
+  .MainPageButtom {
+    height: 500px;
+    background-color: #FFD241;
+    margin-bottom: -130px;
+    padding: 30px 20px;
+  }
+  .MainPageButtom .LeftBlock {
+    margin-right: 30px;
+    width: 100%;
+  }
+  .MainPageButtom .LeftBlock h2 {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .MainPageButtom .LeftBlock h1 {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-size: 1rem;
+  }
+  .MainPageButtom .LeftBlock p {
+    text-align: left;
+    font-weight: 0.6rem;
+    font-weight: 500;
+    color: #6e6666;
+    margin-bottom: 50px;
+  }
+  .MainPageButtom .LeftBlock p .Line {
+    height: 6px;
+    background-color: black;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  .MainPageButtom .LeftBlock .GoButton {
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .MainPageButtom .LeftBlock .GoButton:hover {
+    cursor: pointer;
+  }
+  .MainPageButtom .LeftBlock .GoButton span {
+    margin-left: 70px;
+  }
+  .MainPageButtom .LeftBlock h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.6rem;
+  }
+  .MainPageButtom .LeftBlock h3:hover {
+    cursor: pointer;
+  }
+  .MainPageButtom .Jorney {
+    display: none;
+  }
 }/*# sourceMappingURL=Bottom.css.map */

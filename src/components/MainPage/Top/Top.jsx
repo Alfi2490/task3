@@ -1,34 +1,45 @@
 import './Top.css';
-import Header from '../../LenthWithForm/Header/Header';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeCondition, setFilter } from '../../../redux/appReducer';
+import { setFilter } from '../../../redux/appReducer';
 import SelectGroupe from './SelectGroupe/SelectGroupe';
 import { mainPageTopSelector } from '../../../redux/mainPageTopReduser';
+import { useHistory } from 'react-router-dom';
 
 function Top() {
 
     const dispatch = useDispatch();
-    const { Country, Type, dateFrom, dateTo } = useSelector(mainPageTopSelector);
-    const filter = {Country: Country, Type: Type, Dates: {From: dateFrom, To: dateTo}};
+    const { Country, Type, dates } = useSelector(mainPageTopSelector);
+    const filter = {
+        Country: Country === 'Country' ? '' : Country, 
+        Type: Type === 'Type' ? '' : Type,
+        Dates: dates
+    };
+
+    let history = useHistory();
     
-    return <div className="MainPageTop">
+    return (
+      <div className="MainPageTop">
 
-        <Header noBackground />
+        <div className="MainPageFilteer">
+          <button
+            onClick={() => {
+              history.push('/lenth');
+              dispatch(setFilter(filter));
+            }}
+          >
+            Apply
+          </button>
 
-        <div className="MainPageFilteer" >
+          <SelectGroupe />
 
-            <button onClick={() => {
-                dispatch(changeCondition('LenthWithForm'));
-                dispatch(setFilter(filter));
-                }}>Apply</button>
-
-            <SelectGroupe />
-
-            <p>We have many opportunities for proposing new jorneys and make you happy!</p>
+          <p>
+            We have many opportunities for proposing new jorneys 
+            and make you happy!
+          </p>
 
         </div>
-        
-    </div>
+      </div>
+    );
 }
 
 export default Top;

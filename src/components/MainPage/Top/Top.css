@@ -2,6 +2,7 @@
   height: 400px;
   background-image: url(topBackground.jpg);
   background-size: cover;
+  padding-top: 80px;
 }
 .MainPageTop .MainPageFilteer {
   width: 30%;
@@ -25,4 +26,17 @@
   color: white;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 481px) {
+  .MainPageTop {
+    height: 400px;
+    background-image: url(topBackground.jpg);
+    background-size: cover;
+    padding-top: 80px;
+  }
+  .MainPageTop .MainPageFilteer {
+    width: 70%;
+    margin: 60px auto;
+  }
 }/*# sourceMappingURL=Top.css.map */
