@@ -1,7 +1,8 @@
 import './App.css';
 import LenthWithForm from './components/LenthWithForm/LenthWithForm';
 import MainPage from './components/MainPage/MainPage';
-import {Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import AdminPage from './components/AdminPage/AdminPage';
 
 
 function App() {
@@ -10,10 +11,16 @@ function App() {
     <div className="App">
 
       <Switch>
+
         <Route path="/" exact component={MainPage} />
+
         <Route path="/lenth" component={LenthWithForm} />
+
+        <Route path="/admin" component={AdminPage} />
+
         <Redirect from="**" to="/" />
-      </Switch>  
+
+      </Switch>
 
     </div>
   );

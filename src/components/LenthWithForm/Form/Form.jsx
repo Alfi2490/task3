@@ -4,7 +4,9 @@ import AboutYou from "./AboutYou";
 import * as Yup from "yup";
 
 function Form() {
+
   const formik = useFormik({
+
     initialValues: {
       name: "",
       tel: "",
@@ -21,6 +23,7 @@ function Form() {
       getEmails: true,
       agreement: false,
     },
+
     validationSchema: Yup.object({
       name: Yup.string().min(2, "Too short Name!").required("Required!"),
       tel: Yup.string()
@@ -29,6 +32,7 @@ function Form() {
         .required('Required!'),
       place: Yup.string().required("Required!"),
     }),
+    
     onSubmit: (values) => {
       if (values.agreement !== true) {
         alert('Choose agreement!');
