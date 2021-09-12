@@ -12,13 +12,16 @@ function Bottom() {
         <div className="LeftBlock">
           <h2>All the World.</h2>
           <h1>Holidays in the May</h1>
-          <p>
-          <span className="Line"></span>
+
+          <div className="Text">
+            <div className="Line"></div>
+            <p>
             Holidays in the May - this is good occassion to go to vacation!
             Roads for any taste in Russia and all the World. Author ways in the
             Israel, Belarus, Madagascar. Ways in the Turkey, Georgia, Italy.
             Find the trip as you like!
-          </p>
+            </p>
+          </div>
 
           <button className="GoButton" onClick={() => history.push('/lenth')}>Go! <span>{String.fromCharCode(62)}</span></button>
 

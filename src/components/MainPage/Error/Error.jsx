@@ -6,7 +6,7 @@ function Error() {
 
     const { error } = useSelector(appSelector);
 
-    return <span className="Error">{error}</span>
+    return <span className="ErrorMain">{error}</span>
 }
 
 export default Error;

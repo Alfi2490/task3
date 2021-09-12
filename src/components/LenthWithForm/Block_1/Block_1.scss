@@ -16,6 +16,8 @@
 
             height: 218px;
             background-image: url("test.png");
+            background-position: center;
+            background-size: cover;
             position: relative;
 
             .Price {
@@ -29,8 +31,8 @@
                 padding-top: 16px;
                 position: absolute;
                 bottom: 0;
-
-
+                padding: 12px;
+            
             }
 
         }
@@ -81,4 +83,16 @@
         }
 
     }
+}
+
+
+@media only screen and (max-width:487px){
+
+    .BLOCK_1{
+        width: 94%;
+        .Element{
+            margin-bottom: 60px;
+        }
+    }
+
 }

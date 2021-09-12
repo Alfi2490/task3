@@ -13,6 +13,8 @@
 .BLOCK_1 .Element .Image {
   height: 218px;
   background-image: url("test.png");
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 .BLOCK_1 .Element .Image .Price {
@@ -25,6 +27,7 @@
   padding-top: 16px;
   position: absolute;
   bottom: 0;
+  padding: 12px;
 }
 .BLOCK_1 .Element .Country {
   font-size: 11px;
@@ -55,4 +58,13 @@
   font-size: 9px;
   text-align: center;
   padding: 3px;
+}
+
+@media only screen and (max-width: 487px) {
+  .BLOCK_1 {
+    width: 94%;
+  }
+  .BLOCK_1 .Element {
+    margin-bottom: 60px;
+  }
 }/*# sourceMappingURL=Block_1.css.map */

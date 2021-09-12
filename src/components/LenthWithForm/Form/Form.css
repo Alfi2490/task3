@@ -147,4 +147,38 @@
 }
 .Form .ButtonSubmit:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 481px) {
+  .Form {
+    width: 94%;
+    padding-top: 15px;
+  }
+  .Form label {
+    margin-top: 10px;
+  }
+  .Form .FormPart {
+    margin-top: 30px;
+  }
+  .Form .AboutYou {
+    display: flex;
+    flex-direction: column;
+  }
+  .Form .AboutYou .FormGroupe {
+    width: 100%;
+  }
+  .Form .AboutYou .FormGroupe .Input {
+    width: 100%;
+  }
+  .Form .AboutYou .FormGroupe .InputRed {
+    width: 100%;
+  }
+  .Form .AboutYou .FormGroupeBottom {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .Form .ButtonSubmit {
+    width: 90%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=Form.css.map */

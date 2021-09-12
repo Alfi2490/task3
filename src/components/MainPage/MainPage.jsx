@@ -11,7 +11,7 @@ function MainPage() {
     const { error } = useSelector(appSelector);
 
     useEffect(() => {
-        // dispatch(getEventsAction());
+        dispatch(getEventsAction());
     }, [dispatch]);
 
     return <div >
