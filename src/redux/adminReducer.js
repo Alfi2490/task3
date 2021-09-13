@@ -21,11 +21,15 @@ const slice = createSlice({
     initialState: initState,
     reducers: {
 
+        setState: (state, {payload}) => {
+            state = payload;
+        }
+
     }
 });
 
 export const {
-
+    setState
 } = slice.actions;
 
 export const adminSelector = state => state.admin;

@@ -7,9 +7,9 @@ function AdminPage() {
 
         <Switch>
 
-            <Route path="/admin" component={AdminLenth} />
-
             <Route path="/admin/form" component={AdminForm} />
+
+            <Route path="/admin" component={AdminLenth} />
 
             <Redirect from="**" to="/" />
 

@@ -1,0 +1,14 @@
+.AdminLenthFilter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.AdminLenthFilter input {
+  width: 20%;
+  height: 30px;
+  padding: 0 15px;
+}
+.AdminLenthFilter button {
+  width: 10%;
+  height: 30px;
+}/*# sourceMappingURL=AdminLenthFilter.css.map */
