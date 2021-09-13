@@ -10,12 +10,12 @@ function AdminLenthRow () {
     return <table className="AdminLenthRow">
 
             <thead>
-                <td>Country</td><td>Title</td><td>Date</td>
+                <td>Country</td><td>Title</td><td>Date</td>                
             </thead>
 
             <tbody>
                 {events.map( event => <AdminLenthRowElement 
-                                    key={event.key}
+                                    key={event.ID}
                                     event={event}
                                 />)}
             </tbody>
