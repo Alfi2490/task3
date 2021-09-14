@@ -1,16 +1,52 @@
 import { useHistory } from 'react-router-dom';
 import './AdminLenthFilter.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { setAdminFilter, appSelector } from '../../../../redux/appReducer';
 
 function AdminLenthFilter () {
 
-    let history = useHistory()
+    let history = useHistory();
+    const dispatch = useDispatch();
+    const { adminFilter } = useSelector(appSelector);
+
+    function onChangeHandler (payload, type) {
+        let {...tmp} = adminFilter;
+        if (type === 'title') {
+            tmp.Title = payload;
+        };
+        if (type === 'country') {
+            tmp.Country = payload;
+        };
+        if (type === 'date') {
+            tmp.Date = payload;
+        }
+        dispatch(setAdminFilter(tmp));
+    }
 
     return <div className="AdminLenthFilter">
 
-            <input type="text" placeholder="Title" />
-            <input type="text" placeholder="Country"/>
-            <input type="text" placeholder="Date" />
-            <button onClick={() => history.push('./admin/form')}>Create event</button>
+            <input 
+                type="text" 
+                placeholder="Title" 
+                value={adminFilter.Title}
+                onChange={(e) => onChangeHandler(e.target.value, 'title')} />
+
+            <input 
+                type="text" 
+                placeholder="Country"
+                value={adminFilter.Country}
+                onChange={(e) => onChangeHandler(e.target.value, 'country')} />
+
+            <input 
+                type="text" 
+                placeholder="Date"
+                value={adminFilter.Date}
+                onChange={(e) => onChangeHandler(e.target.value, 'date')}
+                 />
+
+            <button onClick={() => history.push('./admin/form')}>
+                Create event
+            </button>
 
         </div>
 }

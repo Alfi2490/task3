@@ -7,6 +7,7 @@ export const initState ={
     countries: ['Belarus', 'Israel', 'Turkey', 'Russia', 'Italy'],
     types: ['Rest', 'Jorney', 'Tourism', 'Beer trip', 'Excursion'],
     filter: {},
+    adminFilter: {Country:'', Title:'', Date:''}
 };
 
 const slice = createSlice({
@@ -48,6 +49,13 @@ const slice = createSlice({
 
         setFilter: (state, {payload}) => {
             state.filter = payload;
+        },
+
+        setAdminFilter: (state, {payload}) => {
+            payload.Country.trim();
+            payload.Title.trim();
+            payload.Date.trim();
+            state.adminFilter = payload;
         }
 
     }
@@ -60,7 +68,8 @@ export const {
     setFilterRedux,
     setCountries,
     setTypes,
-    setFilter
+    setFilter,
+    setAdminFilter
 } = slice.actions;
 
 export const appSelector = state => state.app;

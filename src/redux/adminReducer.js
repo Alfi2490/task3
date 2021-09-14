@@ -13,7 +13,6 @@ export const initState ={
     Transfer: false,
     Type: '',
     Way: ''
-
 };
 
 const slice = createSlice({
