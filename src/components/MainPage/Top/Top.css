@@ -1,6 +1,6 @@
 .MainPageTop {
   height: 400px;
-  background-image: url(topBackground.jpg);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/test3-d2998.appspot.com/o/topBackground.jpg?alt=media&token=e729d666-a7fc-401f-97c3-3ab9423647a2);
   background-size: cover;
   padding-top: 80px;
 }
@@ -31,7 +31,7 @@
 @media only screen and (max-width: 481px) {
   .MainPageTop {
     height: 400px;
-    background-image: url(topBackground.jpg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/test3-d2998.appspot.com/o/topBackground.jpg?alt=media&token=e729d666-a7fc-401f-97c3-3ab9423647a2);
     background-size: cover;
     padding-top: 80px;
   }

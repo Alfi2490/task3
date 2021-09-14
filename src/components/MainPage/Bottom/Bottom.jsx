@@ -1,5 +1,4 @@
 import './Bottom.css'
-import jorney from './jorney.jpg';
 import { useHistory } from 'react-router-dom';
 
 function Bottom() {
@@ -29,7 +28,7 @@ function Bottom() {
 
         </div>
 
-        <img src={jorney} alt="JORNEY" className="Jorney" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/test3-d2998.appspot.com/o/jorney.jpg?alt=media&token=5a8dcfe5-d375-4473-88bb-2bd4c2e8d209" alt="JORNEY" className="Jorney" />
 
       </div>
     );
