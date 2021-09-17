@@ -15,14 +15,14 @@ function AdminLenthRowElement (props) {
         history.push('/admin/form')
     }
 
-    const littleElem = <tr className="AdminLenthRowElement">
-            <td onClick={() => setState(!state)}>{event.Country}</td>
+    const littleElem = <>
+            <td >{event.Country}</td>
             <td>{event.Title}</td>
             <td>{event.Dates.From.slice(4,15)}</td>        
-        </tr>;
+        </>;
 
-    const bigElem = <tr className="AdminLenthRowElement">
-        <td onClick={() => setState(!state)}>{event.Country}</td>
+    const bigElem = <>
+        <td>{event.Country}</td>
         <td>{event.Title}, {event.Price}$</td>
         <td>
             {event.Dates.From.slice(4,15)} - {event.Dates.To.slice(4,15)} 
@@ -30,9 +30,11 @@ function AdminLenthRowElement (props) {
             {event.Way}
             <button onClick={() => handleSetEvent() }>Edit event</button>
         </td>        
-</tr>;
+    </>;
 
-    return state ? bigElem : littleElem
+    return <tr className="AdminLenthRowElement" onClick={() => setState(!state)}>
+           {state ? bigElem : littleElem}
+        </tr>;
 }
 
 export default AdminLenthRowElement;
