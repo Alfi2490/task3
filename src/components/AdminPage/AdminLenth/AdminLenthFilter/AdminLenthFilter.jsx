@@ -2,12 +2,18 @@ import { useHistory } from 'react-router-dom';
 import './AdminLenthFilter.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { setAdminFilter, appSelector } from '../../../../redux/appReducer';
+import { setEvent } from '../../../../redux/adminReducer';
 
 function AdminLenthFilter () {
 
     let history = useHistory();
     const dispatch = useDispatch();
     const { adminFilter } = useSelector(appSelector);
+
+    function setEventHandler() {
+        dispatch(setEvent('nope'));
+        history.push('./admin/form')
+    }
 
     function onChangeHandler (payload, type) {
         let {...tmp} = adminFilter;
@@ -44,7 +50,7 @@ function AdminLenthFilter () {
                 onChange={(e) => onChangeHandler(e.target.value, 'date')}
                  />
 
-            <button onClick={() => history.push('./admin/form')}>
+            <button onClick={ () => setEventHandler() }>
                 Create event
             </button>
 

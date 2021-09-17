@@ -6,7 +6,7 @@ export const initState ={
     Days: '',
     ID: '',
     Image: '',
-    Language: 'Russian',
+    Language: '',
     Nights: '',
     Price: '',
     Title: '',
@@ -20,15 +20,41 @@ const slice = createSlice({
     initialState: initState,
     reducers: {
 
-        setState: (state, {payload}) => {
-            state = payload;
+        setEvent: (state, {payload}) => {
+            if (payload === 'nope') {
+                state.Country = '';
+                state.Dates = {From: '', To: ''};
+                state.Days = '';
+                state.ID = '';
+                state.Image = '';
+                state.Language = '';
+                state.Nights = '';
+                state.Price = '';
+                state.Title = '';
+                state.Transfer = false;
+                state.Type = '';
+                state.Way = '';
+                return
+            }
+            state.Country = payload.Country;
+            state.Dates = payload.Dates;
+            state.Days = payload.Days;
+            state.ID = payload.ID;
+            state.Image = payload.Image;
+            state.Language = payload.Language;
+            state.Nights = payload.Nights;
+            state.Price = payload.Price;
+            state.Title = payload.Title;
+            state.Transfer = payload.Transfer;
+            state.Type = payload.Type;
+            state.Way = payload.Way;
         }
 
     }
 });
 
 export const {
-    setState
+    setEvent
 } = slice.actions;
 
 export const adminSelector = state => state.admin;
